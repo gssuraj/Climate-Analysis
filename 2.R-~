@@ -1,0 +1,2 @@
+part.00000 <- read.delim("~/Desktop/climate/part-00000", header=FALSE)
+plot((part.00000$V2))

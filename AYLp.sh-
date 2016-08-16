@@ -1,0 +1,15 @@
+hadoop jar ~/Desktop/YearlyLP1.jar /dset/dset/ /op/newop/
+wget http://localhost:50070/webhdfs/v1/output/newop/part-00000?op=OPEN
+hadoop jar ~/Desktop/YearlyLP2.jar /dset/dset/ /op/newop1/
+wget http://localhost:50070/webhdfs/v1/output/newop1/part-00000?op=OPEN
+hdfs dfs -rmr /op/newop/
+hdfs dfs -rmr /op/newop1/
+visual=$(zenity --list \
+  --text="Please select a visualization type" \
+  --title="Visualization" \
+  --column="Visualization" \
+	Bar-chart \
+	Line-chart 	
+);
+
+
